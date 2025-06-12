@@ -87,4 +87,110 @@
             </div>
         </section>
 
+        <section id="demo" class="demo-section">
+            <div class="container">
+                <h2>💻 Live Demo: Modern JavaScript in Action</h2>
+                <div class="demo-grid">
+                    <div class="demo-card">
+                        <h3>Web Components (ES2024)</h3>
+                        <div class="code-preview">
+                            <custom-counter start="0" step="1"></custom-counter>
+                        </div>
+                        <p>Custom elements with shadow DOM and modern JavaScript features</p>
+                    </div>
+                    <div class="demo-card">
+                        <h3>Async/Await Patterns</h3>
+                        <div class="demo-interactive">
+                            <button id="fetch-demo" class="modern-btn">Fetch Random Fact</button>
+                            <div id="fact-display" class="fact-box">Click to load a random fact!</div>
+                        </div>
+                        <p>Modern asynchronous programming with clean syntax</p>
+                    </div>
+                    <div class="demo-card">
+                        <h3>CSS-in-JS Animation</h3>
+                        <div class="animation-demo">
+                            <div class="morphing-shape" id="morphShape"></div>
+                            <button onclick="morphShape()" class="modern-btn">Morph Shape</button>
+                        </div>
+                        <p>Dynamic styling with Web Animations API</p>
+                    </div>
+                    <div class="demo-card">
+                        <h3>Real-time Features</h3>
+                        <div class="realtime-demo">
+                            <div class="live-clock" id="liveClock"></div>
+                            <div class="battery-status" id="batteryStatus">Checking battery...</div>
+                        </div>
+                        <p>Browser APIs for live system information</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="playground" class="playground">
+            <div class="container">
+                <h2>🎮 Interactive Code Playground</h2>
+                <div class="playground-area">
+                    <div class="code-editor">
+                        <div class="editor-header">
+                            <span>Live Code Editor</span>
+                            <button onclick="runCode()" class="run-btn">▶ Run Code</button>
+                        </div>
+                        <textarea id="codeEditor" placeholder="// Try some modern JavaScript!
+// Example: Create a reactive counter
+const counter = document.createElement('div');
+counter.textContent = 'Count: 0';
+counter.style.cssText = 'padding: 20px; font-size: 24px; text-align: center; background: linear-gradient(45deg, #ff6b6b, #4ecdc4); color: white; border-radius: 10px; cursor: pointer; transition: transform 0.2s;';
+
+let count = 0;
+counter.onclick = () => {
+    count++;
+    counter.textContent = `Count: ${count}`;
+    counter.style.transform = 'scale(1.1)';
+    setTimeout(() => counter.style.transform = 'scale(1)', 150);
+};
+
+document.querySelector('#output').appendChild(counter);">// Try some modern JavaScript!
+// Example: Create a reactive counter
+const counter = document.createElement('div');
+counter.textContent = 'Count: 0';
+counter.style.cssText = 'padding: 20px; font-size: 24px; text-align: center; background: linear-gradient(45deg, #ff6b6b, #4ecdc4); color: white; border-radius: 10px; cursor: pointer; transition: transform 0.2s;';
+
+let count = 0;
+counter.onclick = () => {
+    count++;
+    counter.textContent = `Count: ${count}`;
+    counter.style.transform = 'scale(1.1)';
+    setTimeout(() => counter.style.transform = 'scale(1)', 150);
+};
+
+document.querySelector('#output').appendChild(counter);</textarea>
+                    </div>
+                    <div class="output-panel">
+                        <div class="output-header">
+                            <span>Live Output</span>
+                            <button onclick="clearOutput()" class="clear-btn">Clear</button>
+                        </div>
+                        <div id="output" class="output-area">
+                            <p>Your interactive components will appear here!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="examples-row">
+                    <button onclick="loadExample('voice')" class="example-btn">🎙️ Voice Recognition</button>
+                    <button onclick="loadExample('camera')" class="example-btn">📷 Camera Access</button>
+                    <button onclick="loadExample('geolocation')" class="example-btn">📍 Geolocation</button>
+                    <button onclick="loadExample('websocket')" class="example-btn">🔗 Real-time Data</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
