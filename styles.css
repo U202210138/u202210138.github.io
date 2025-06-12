@@ -446,6 +446,13 @@ nav {
     height: 500px;
 }
 
+@media (max-width: 1024px) {
+    .playground-area {
+        height: 400px;
+        gap: 1.5rem;
+    }
+}
+
 .code-editor, .output-panel {
     background: #1e1e1e;
     border-radius: 12px;
@@ -563,15 +570,91 @@ nav {
         display: none;
     }
     
-    .switch-mockup {
+    .terminal-window {
         width: 300px;
-        height: 180px;
         margin-top: 2rem;
     }
     
     .features-grid,
     .specs-grid,
-    .games-grid {
+    .demo-grid {
         grid-template-columns: 1fr;
+    }
+    
+    /* Playground Responsive */
+    .playground {
+        padding: 40px 0;
+    }
+    
+    .playground-area {
+        grid-template-columns: 1fr;
+        height: auto;
+        gap: 1rem;
+    }
+    
+    .code-editor, .output-panel {
+        height: 300px;
+    }
+    
+    #codeEditor {
+        height: calc(100% - 50px);
+        font-size: 12px;
+    }
+    
+    .output-area {
+        height: calc(100% - 50px);
+    }
+    
+    .examples-row {
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+    
+    .example-btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 0.9rem;
+    }
+    
+    .editor-header, .output-header {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
+    
+    .run-btn, .clear-btn {
+        padding: 4px 8px;
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+    
+    .playground {
+        padding: 30px 0;
+    }
+    
+    .code-editor, .output-panel {
+        height: 250px;
+    }
+    
+    .terminal-window {
+        width: 250px;
+    }
+    
+    .feature-card, .demo-card {
+        padding: 1.5rem;
+    }
+    
+    .cta-button {
+        padding: 12px 24px;
+        font-size: 1rem;
     }
 }
